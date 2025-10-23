@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+ <script>
+    var feedback= "   I loved the FOOD and the service!   ";
+    feedback = feedback.trim();
+    feedback=feedback.toLowerCase();
+    feedback=feedback.replace('food','ambience');
+    var position=feedback.indexOf('service');
+    console.log("postion of 'service' is :", position);
+    document.write(feedback)
+    let wordsArray = feedback.split(" ");
+console.log(wordsArray);
+ </script>   
+</body>
+</html>
