@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Return Page </title>
+</head>
+<body>
+    <script>
+        let order={
+            itemName:"Car",
+            isDelivered:true,
+            daysSinceDelivery:5
+        }
+        function checkDeliveryStatus(order){
+            let returnStatus=((order.isDelivered==true) && (order.daysSinceDelivery<=7)) ? "Eligible for Return" : "Return Period Expired";
+            console.log(returnStatus);
+            let exist="itemName"in order? "Item name exists in order object":"item Name does not exist in order object";
+            console.log(exist);
+            document.write(exist)
+            let removeProp="daysSinceDelivery"in order? (delete order.daysSinceDelivery, " daysSinceDelivery property deleted") : " daysSinceDelivery does not exist in order object";
+            console.log(removeProp);
+             document.write(removeProp)
+            console.log(order);
+             document.write(order)
+
+        }
+
+    </script>
+    <button onclick="checkDeliveryStatus(order)">Check for Eligiblity</button>
+</body>
+</html>
