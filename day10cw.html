@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Format</title>
+</head>
+<body>
+    <h1>JSON Format</h1>
+    <p id="demo"></p>
+    <script>
+        let Juser ={"Name": "jishnu",
+        "Email":"jishnu@gmail.com",
+        "Message":"Hello, HOw are you!.."};
+
+     let convertedmessage =() =>
+    {
+    try{
+        let user=JSON.parse(user);
+        console.log(`Message received from ${Juser.Name}`)
+        }
+        catch(err){
+            console.log( 'error message', err.messsage);
+        }
+    }
+    convertedmessage();
+    // document.getElementById("demo")=convertedmessage();
+        </script>
+</body>
+</html>
