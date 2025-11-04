@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Books</title>
+</head>
+<body>
+    <h1>System That Stores Information About Books</h1>
+    <p id="demo"></p>
+
+    <script>
+        class Book {
+            constructor(title, author, price) {
+                this._title = title;
+                this._author = author;
+                this._price = price;
+            }
+
+      
+            getTitle() {
+                return this._title;
+            }
+
+           
+            getAuthor() {
+                return this._author;
+            }
+
+           
+            set price(newPrice) {
+                if (typeof newPrice === "number" && newPrice > 0) {
+                    this._price = newPrice;
+                    console.log(`Price updated to: $${this._price}`);
+                } else {
+                    console.log(" Invalid price. It must be a positive number.");
+                }
+            }
+            displayDetails() {
+                document.getElementById("demo").innerHTML = 
+                    `<strong>Book Details:</strong><br>
+                     Title: ${this._title}<br>
+                     Author: ${this._author}<br>
+                     Price: $${this._price}`;
+            }
+        }
+
+       
+        const book1 = new Book("A Game of Thrones", "George R. R. Martin", 200);
+
+     
+        book1.price = -5;        
+        book1.price = "twenty";   
+        book1.price = 27.50;      
+
+        book1.displayDetails();
+    </script>
+</body>
+</html>
+
+    
+</body>
+</html>
